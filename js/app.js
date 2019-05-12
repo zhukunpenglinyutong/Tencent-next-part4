@@ -3,7 +3,9 @@
  */
 function render() {
   // TODO: 目前只渲染了一个消息（多图片信息）,需要展示data数组中的所有消息数据。
-  let messageHtml = messageTpl(data[0]);
+  let messageHtml;
+  data.forEach(item => messageHtml += messageTpl(item))
+
   $momentsList.html(messageHtml);
 }
 

@@ -1,4 +1,3 @@
-
 /**
  * 多张图片消息模版 （可参考message.html）
  * @param {Object} pics 多图片消息的图片列表
@@ -13,6 +12,26 @@ function multiplePicTpl(pics) {
   htmlText.push('</ul>');
   return htmlText.join('');
 }
+
+/**
+ * 分享
+ * @param {Object} 
+ * @return {String} 返回html字符串
+ */
+function sharer(share) {
+  return htmlText = `<p class="sharer-content"><img src="${share.pic}" /> ${share.text}</p>`
+}
+
+/**
+ * 单图片
+ * @param {Object} 
+ * @return {String} 返回html字符串
+ */
+function picture(pic) {
+  console.log(pic)
+  return htmlText = `<img class="picture-img" src="${pic}" />`
+}
+
 
 /**
  * 循环：消息体 
@@ -42,8 +61,12 @@ function messageTpl(messageData) {
       contentHtml = multiplePicTpl(content.pics);
       break;
     case 1:
+      contentHtml = sharer(content.share);
+      break;
       // TODO: 实现分享消息
     case 2:
+      contentHtml = picture(content.pics[0]);
+      break;
       // TODO: 实现单张图片消息
     case 3:
       // TODO: 实现无图片消息
