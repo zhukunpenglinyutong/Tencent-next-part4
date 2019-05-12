@@ -20,13 +20,16 @@ let data = [{
   }, 
   reply: {
     hasLiked: false,
-    likes: ['Guo封面', '源小神'],
+    likes: ['Guo封面', '源小神', '朱昆鹏1'],
     comments: [{
       author: 'Guo封面',
       text: '你也喜欢华仔哈！！！'
     },{
       author: '喵仔zsy',
       text: '华仔实至名归哈'
+    },{
+      author: '朱昆鹏1',
+      text: '测试'
     }]
   }
 }, {

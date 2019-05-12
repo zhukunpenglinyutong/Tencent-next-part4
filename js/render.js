@@ -28,7 +28,6 @@ function sharer(share) {
  * @return {String} 返回html字符串
  */
 function picture(pic) {
-  console.log(pic)
   return htmlText = `<img class="picture-img" src="${pic}" />`
 }
 

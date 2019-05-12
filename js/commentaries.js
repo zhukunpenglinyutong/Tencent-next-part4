@@ -1,4 +1,23 @@
 /**
+ * 点赞评论触发
+ */
+function availableUpdate(that) {
+  // console.log(that.html())
+  let htmlText = that.html()
+  
+  // 渲染出来
+  htmlText = `
+  <div class="item-reply">
+    <p class="availableUpdate-p">
+      <span><img src="img/like.png" /> 点赞</span>
+      <span><img src="img/comment.png" /> 评论</span>      
+    </p>
+  </div>
+  `
+  that.html(htmlText)
+}
+
+/**
  * 点赞内容 HTML 模板
  * @param {Array} likes 点赞人列表
  * @return {String} 返回html字符串
